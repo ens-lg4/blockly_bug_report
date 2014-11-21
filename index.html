@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bug report (on the parasitic transitivity of connection rules)</title>
+  <title>Bug report #2 - compatibility rules not checked when removing a block from a stack of statements</title>
   <style>
     html, body {
       height: 100%;
@@ -29,7 +29,7 @@
   <table width="100%" height="99%">
     <tr>
       <td>
-        <h1>Bug report (on the parasitic transitivity of setPreviousStatement and setNextStatement)</h1>
+        <h1>Bug report #2 - compatibility rules not checked when removing a block from a stack of statements</h1>
       </td>
     </tr>
     <tr>
@@ -40,8 +40,8 @@
         <li>Green can be followed by Purple</li>
         <li>Blue can be followed by Green</li>
         </ul>
-        However if you first make a Green-Purple pair, then fit a Blue between them, it will unfortunately bind (so only one of the rules is checked at this point, it seems).
-        You can then drag the Blue block bound to the Purple one. Now you have an "illegal" Blue-Purple pair - something you would not be able to construct directly.
+        Try making a stack of Blue-Green-Purple. Now use right-click to bring up the context menu on the Green block and delete it.
+        The Blue-Purple will stick into an "illegal" pair.
         <br><br>
         <a href=http://github.com/ens-lg4/blockly_bug_report target=_new>See all the files in GitHub</a>.
 
