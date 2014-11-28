@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bug report #2 - compatibility rules not checked when removing a block from a stack of statements</title>
+  <title>Bug report #3 - assymmetry of binding</title>
   <style>
     html, body {
       height: 100%;
@@ -29,7 +29,7 @@
   <table width="100%" height="99%">
     <tr>
       <td>
-        <h1>Bug report #2 - compatibility rules not checked when removing a block from a stack of statements</h1>
+        <h1>Bug report #3 - assymmetry of binding</h1>
       </td>
     </tr>
     <tr>
@@ -40,8 +40,8 @@
         <li>Green can be followed by Purple</li>
         <li>Blue can be followed by Green</li>
         </ul>
-        Try making a stack of Blue-Green-Purple. Now use right-click to bring up the context menu on the Green block and delete it.
-        The Blue-Purple will stick into an "illegal" pair.
+        Try making a stack of Blue-Green. Then bring a new Purple under the Green - it will bind as it should.<br/>
+        Now detach the Purple from Blue-Green, grab the Blue-Green pair by the Blue block and try to attach the pair on top of the Purple - it will repel.
         <br><br>
         <a href=http://github.com/ens-lg4/blockly_bug_report target=_new>See all the files in GitHub</a>.
 
